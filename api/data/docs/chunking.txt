@@ -1,0 +1,12 @@
+Chunking notes
+
+Documents are split into chunks before they are embedded, because an embedding
+model has a fixed input limit and a whole document averages out into a vague
+vector that matches nothing well.
+
+Citewise uses chunks of about 500 words with 50 words of overlap. The overlap
+exists so that a sentence sitting on a chunk boundary still appears whole in one
+of the two neighbouring chunks.
+
+Each chunk is stored with the name of the file it came from, so an answer can
+cite its source.

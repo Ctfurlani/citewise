@@ -1,0 +1,45 @@
+# Relevance feedback
+
+Relevance feedback is a feature of some information retrieval and recommender systems.  The idea behind relevance feedback is to take the results that are initially returned from a given query, to gather user feedback, and to use information about whether or not those results are relevant to perform a new query.  We can usefully distinguish between three types of feedback: explicit feedback, implicit feedback, and blind or "pseudo" feedback.
+
+Explicit feedback is obtained from assessors of relevance indicating the relevance of a document retrieved for a query. This type of feedback is defined as explicit only when the assessors (or other users of a system) know that the feedback provided is interpreted as relevance judgments.
+
+Users may indicate relevance explicitly using a binary or graded relevance system. Binary relevance feedback indicates that a document is either relevant or irrelevant for a given query. Graded relevance feedback indicates the relevance of a document to a query on a scale using numbers, letters, or descriptions (such as "not relevant", "somewhat relevant", "relevant", or "very relevant"). Graded relevance may also take the form of a cardinal ordering of documents created by an assessor; that is, the assessor places documents of a result set in order of (usually descending) relevance.  An example of this would be the SearchWiki feature implemented by Google on their search website.
+
+The relevance feedback information needs to be interpolated with the original query to improve retrieval performance, such as the well-known Rocchio algorithm.
+
+A performance metric which became popular around 2005 to measure the usefulness of a ranking algorithm based on the explicit relevance feedback is normalized discounted cumulative gain. Other measures include precision at k and mean average precision.
+
+Implicit feedback is inferred from user behavior, such as noting which documents they do and do not select for viewing, the duration of time spent viewing a document, or page browsing or scrolling actions. There are many signals during the search process that one can use for implicit feedback and the types of information to provide in response.
+
+The key differences of implicit relevance feedback from that of explicit include:
+
+The user is not assessing relevance for the benefit of the IR system, but only satisfying their own needs and
+
+The user is not necessarily informed that their behavior (selected documents) will be used as relevance feedback
+
+An example of this is dwell time, which is a measure of how long a user spends viewing the page linked to in a search result. It is an indicator of how well the search result met the query intent of the user, and is used as a feedback mechanism to improve search results.
+
+Pseudo relevance feedback, also known as blind relevance feedback, provides a method for automatic local analysis. It automates the manual part of relevance feedback, so that the user gets improved retrieval performance without an extended interaction. The method is to do normal retrieval to find an initial set of most relevant documents, to then assume that the top "k" ranked documents are relevant, and finally to do relevance feedback as before under this assumption. The procedure is:
+
+Take the results returned by initial query as relevant results (only top k with k being between 10 and 50 in most experiments).
+
+Select top 20-30 (indicative number) terms from these documents using for instance tf-idf weights.
+
+Do query expansion, add these terms to query, and then match the returned documents for this query and finally return the most relevant documents.
+
+Some experiments such as results from the Cornell SMART system published in (Buckley et al.1995), show improvement of retrieval systems performances using pseudo-relevance feedback in the context of TREC 4 experiments.
+
+This automatic technique mostly works. Evidence suggests that it tends to work better than global analysis. Through a query expansion, some relevant documents missed in the initial round can then be retrieved to improve the overall performance. Clearly, the effect of this method strongly relies on the quality of selected expansion terms. It has been found to improve performance in the TREC ad hoc task . But it is not without the dangers of an automatic process. For example, if the query is about copper mines and the top several documents are all about mines in Chile, then there may be query drift in the direction of documents on Chile. In addition, if the words added to the original query are unrelated to the query topic, the quality of the retrieval is likely to be degraded, especially in Web search, where web documents often cover multiple different topics. To improve the quality of expansion words in pseudo-relevance feedback, a positional relevance feedback for pseudo-relevance feedback has been proposed to select from feedback documents those words that are focused on the query topic based on positions of words in feedback documents. Specifically, the positional relevance model assigns more weights to words occurring closer to query words based on the intuition that words closer to query words are more likely to be related to the query topic.
+
+Blind feedback automates the manual part of relevance feedback and has the advantage that assessors are not required.
+
+Relevance information is utilized by using the contents of the relevant documents to either adjust the weights of terms in the original query, or by using those contents to add words to the query.  Relevance feedback is often implemented using the Rocchio algorithm.
+
+Relevance feedback lecture notes - Jimmy Lin's lecture notes, adapted from Doug Oard's
+
+[1] Archived 2007-07-16 at the Wayback Machine - chapter from Modern Information Retrieval
+
+Stefan Büttcher, Charles L. A. Clarke, and Gordon V. Cormack. Information Retrieval: Implementing and Evaluating Search Engines Archived 2020-10-05 at the Wayback Machine. MIT Press, Cambridge, Mass., 2010.
+
+Source: https://en.wikipedia.org/wiki/Relevance_feedback (Wikipedia, CC BY-SA 4.0)

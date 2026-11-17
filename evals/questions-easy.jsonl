@@ -1,0 +1,20 @@
+{"question": "Who developed the probabilistic retrieval framework that BM25 is based on?", "expected_source": "bm25.md"}
+{"question": "What does tf-idf measure about a word in a corpus?", "expected_source": "tf-idf.md"}
+{"question": "What kind of database stores and retrieves embeddings in vector space?", "expected_source": "vector-database.md"}
+{"question": "In natural language processing, what is a word embedding?", "expected_source": "word-embedding.md"}
+{"question": "How is cosine similarity computed from two vectors?", "expected_source": "cosine-similarity.md"}
+{"question": "Which attention mechanism are transformer architectures built on?", "expected_source": "transformer.md"}
+{"question": "What does retrieval-augmented generation let a large language model do?", "expected_source": "rag.md"}
+{"question": "What optimization problem does nearest neighbor search solve?", "expected_source": "nearest-neighbor-search.md"}
+{"question": "What is a postings list and what is it used for?", "expected_source": "inverted-index.md"}
+{"question": "Which program defines the categories that lexical tokens belong to?", "expected_source": "lexical-analysis.md"}
+{"question": "What is the task of information retrieval?", "expected_source": "information-retrieval.md"}
+{"question": "What is precision also called, and what fraction does it express?", "expected_source": "precision-and-recall.md"}
+{"question": "Which relational database management system emphasizes extensibility and SQL compliance?", "expected_source": "postgresql.md"}
+{"question": "Who started developing Redis, and in what year?", "expected_source": "redis.md"}
+{"question": "What is the core software that runs and manages Docker containers called?", "expected_source": "docker.md"}
+{"question": "Where does the name Kubernetes come from?", "expected_source": "kubernetes.md"}
+{"question": "Which application layer protocol is the foundation of data communication for the World Wide Web?", "expected_source": "http.md"}
+{"question": "Which cryptographic protocol secures HTTPS?", "expected_source": "tls.md"}
+{"question": "Who began working on Python, and when?", "expected_source": "python.md"}
+{"question": "Which company maintains the React library?", "expected_source": "react.md"}

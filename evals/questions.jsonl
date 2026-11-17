@@ -1,0 +1,20 @@
+{"question": "Which measure is the harmonic mean of precision and recall?", "expected_source": "f-score.md"}
+{"question": "Which measure takes the multiplicative inverse of the rank of the first correct answer?", "expected_source": "mean-reciprocal-rank.md"}
+{"question": "Which measure penalises a highly relevant document that appears lower in the result list, reducing its value logarithmically by position?", "expected_source": "dcg.md"}
+{"question": "What fraction of the retrieved items are relevant, as opposed to the fraction of relevant items that were retrieved?", "expected_source": "precision-and-recall.md"}
+{"question": "Which model represents documents and queries as vectors of index terms in a common space?", "expected_source": "vector-space-model.md"}
+{"question": "Which weighting offsets how often a term occurs in one document by how many documents in the corpus contain it?", "expected_source": "tf-idf.md"}
+{"question": "Which ranking function uses term frequency saturation and document length normalisation controlled by k1 and b?", "expected_source": "bm25.md"}
+{"question": "Which algorithm interpolates the original query with the documents a user judged relevant and non-relevant?", "expected_source": "relevance-feedback.md"}
+{"question": "Which technique reformulates a query by adding synonyms or related terms before matching documents?", "expected_source": "query-expansion.md"}
+{"question": "Which field applies machine learning to build ranking models for search results?", "expected_source": "learning-to-rank.md"}
+{"question": "Which self-balancing tree keeps data sorted and allows a node to have more than two children?", "expected_source": "b-tree.md"}
+{"question": "Which structure stores strings so that every descendant of a node shares a common prefix?", "expected_source": "trie.md"}
+{"question": "Which array holds the starting positions of all the suffixes of a string in sorted order?", "expected_source": "suffix-array.md"}
+{"question": "Which structure maps keys to buckets using a hash function and has to resolve collisions?", "expected_source": "hash-table.md"}
+{"question": "Which index maps each term to the list of documents that contain it?", "expected_source": "inverted-index.md"}
+{"question": "Which similarity measure divides the dot product of two vectors by the product of their magnitudes?", "expected_source": "cosine-similarity.md"}
+{"question": "Which measure divides the size of the intersection of two sets by the size of their union?", "expected_source": "jaccard-index.md"}
+{"question": "Which hashing scheme is designed so that similar inputs land in the same bucket on purpose?", "expected_source": "locality-sensitive-hashing.md"}
+{"question": "Which technique applies singular value decomposition to a word-by-document count matrix to relate terms and documents?", "expected_source": "latent-semantic-analysis.md"}
+{"question": "Which model learns word vectors using continuous bag-of-words and skip-gram training?", "expected_source": "word2vec.md"}
